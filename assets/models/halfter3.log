@@ -1,0 +1,83 @@
+Exporter version: 2.80.1, Blender version: 2.92.0
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\Users\DCV\Documents\AbschlussProjekt\exercises\1.2\assets\models\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Stoffueberzug
+		processing begun of material:  Fluffy Parts
+		processing begun of material:  Fabrics
+		processing begun of material:  Metals
+		processing begun of multimaterial:  halfter3.Multimaterial#0
+		Custom split normals with tangents being used
+		num positions      :  15060
+		num normals        :  15060
+		num tangents       :  60240
+		num uvs            :  30120
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  11656
+	processing begun of mesh:  Polsterung
+		processing begun of material:  Fluffy Parts
+		processing begun of material:  Fabrics
+		processing begun of material:  Metals
+		registered as also a user of material:  Fluffy Parts
+		registered as also a user of material:  Fabrics
+		registered as also a user of material:  Metals
+		processing begun of multimaterial:  halfter3.Multimaterial#1
+		Custom split normals with tangents being used
+		num positions      :  6775
+		num normals        :  6775
+		num tangents       :  27100
+		num uvs            :  13550
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  7146
+	processing begun of mesh:  Metallteile
+		processing begun of material:  Fluffy Parts
+		processing begun of material:  Fabrics
+		processing begun of material:  Metals
+		registered as also a user of material:  Fluffy Parts
+		registered as also a user of material:  Fabrics
+		registered as also a user of material:  Metals
+		processing begun of multimaterial:  halfter3.Multimaterial#2
+		Custom split normals with tangents being used
+		num positions      :  28846
+		num normals        :  28846
+		num tangents       :  115384
+		num uvs            :  57692
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20096
+	processing begun of mesh:  Low Poly 
+		processing begun of material:  Fluffy Parts
+		processing begun of material:  Fabrics
+		processing begun of material:  Metals
+		registered as also a user of material:  Fluffy Parts
+		registered as also a user of material:  Fabrics
+		registered as also a user of material:  Metals
+		processing begun of multimaterial:  halfter3.Multimaterial#3
+		Custom split normals with tangents being used
+		num positions      :  7280
+		num normals        :  7280
+		num tangents       :  29120
+		num uvs            :  14560
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8678
+========= Writing of JSON file started =========
+	writing mesh:  Stoffueberzug
+	writing mesh:  Polsterung
+	writing mesh:  Metallteile
+	writing mesh:  Low Poly 
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 8.1514 secs

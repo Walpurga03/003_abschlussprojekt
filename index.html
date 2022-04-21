@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>Startseite - Pferdehalfter Konfigurator</title>
+  <meta name="description"
+    content="Hier haben sie die möglichkeit Ihr eigenes Pferdehalfter mit verschiedenen Materialeien zu gestalten.">
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+  <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+
+  <script language="javascript" type="text/javascript" src="js/main.js"></script>
+  <script language="javascript" type="text/javascript" src="js/store.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+</head>
+
+<body class="startseite">
+  <script>
+    window.sessionStorage.removeItem('cart')
+  </script>
+
+  <header class="site-header">
+    <div class="wrapper">
+      <h1 class="site-logo">
+        <img src="assets/logo/logo-horsenate-240-33.gif" srcset="assets/logo/logo-horsenate-480-67.gif 2x,
+                      assets/logo/logo-horsenate-720-99.gif 3x" alt="Logo von Horsenate">
+      </h1>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="wrapper">
+      <button class="menubutton" onclick="this.classList.toggle('show-menu')">
+        <i class="fas fa-bars"></i>&nbsp;Menü
+      </button>
+
+      <ul class="site-nav-list">
+        <li><a href="index.html" class="sie-sind-hier">Startseite</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="pferdeKarusell.html">Pferde Karussell</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h4 style="margin: auto;">
+    Das besondere Stallhalfter zum selber konfigurieren
+  </h4>
+
+  <main class="site-content">
+    <div class="container">
+      <div id="auswahl-stoffueberzug">
+        <label for="Material">Stoffueberzug:</label>
+        <select name="auswahlMaterial" onchange=waehleStoffueberzug() id="stoffueberzug" required>
+          <option disabled selected value> -- AUSWAHL -- </option>
+          <option value="baumrinde">Baumrinde</option>
+          <option value="candy">Candy</option>
+          <option value="fellimitatOzelot">Fellimitat Ozelot</option>
+          <option value="fellimitatZebra">Fellimitat Zebra</option>
+          <option value="holzHellbraun">Holz Hellbraun</option>
+          <option value="jeansBlau">Jeans Blau</option>
+          <option value="jeansSchwarz">Jeans Schwarz</option>
+          <option value="kork">Kork</option>
+          <option value="rauteLachs">Raute Lachs</option>
+          <option value="regenbogen">Regenbogen</option>
+          <option value="trachtPink">Tracht Pink</option>
+          <option value="vichykaroTürkis">Vichykaro Türkis</option>
+        </select>
+      </div>
+      <div id="auswahl-metallteile">
+        <label for="Material">Metallteile:</label>
+        <select name="auswahlMaterial" onchange=waehleMetallteile() id="metallteile" required>
+          <option disabled selected value> -- AUSWAHL -- </option>
+          <option value="gold">Gold</option>
+          <option value="silber">Silber</option>
+        </select>
+      </div>
+      <div id="auswahl-polsterung">
+        <label for="Material">Polsterung:</label>
+        <select name="auswahlMaterial" onchange=waehlePolsterung() id="polsterung" required>
+          <option disabled selected value> -- AUSWAHL -- </option>
+          <option value="fellimitatOzelot">Fellimitat Ozelot</option>
+          <option value="fellimitatZebra">Fellimitat Zebra</option>
+          <option value="fleeceCamel">Fleece Camel</option>
+          <option value="fleecePink">Fleece Pink</option>
+          <option value="fleeceRot">Fleece Rot</option>
+          <option value="naturWeiß">Natur Weiß</option>
+          <option value="softshellSchwarz">Softshell Schwarz</option>
+          <option value="softshellTürkis">Softshell Türkis</option>
+        </select>
+      </div>
+
+
+
+      <div id="model">
+        <canvas id="renderCanvas" touch-action="none"></canvas>
+      </div>
+
+      <div id="warenkorb">
+        <h3 class="section-header">Warenkorb</h3>
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column"></span>
+          <span class="cart-price cart-header cart-column"></span>
+          <span class="cart-quantity cart-header cart-column"></span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Gesamt Preis</strong>
+          <span class="cart-total-price">€0</span>
+        </div>
+        
+          <input type="text" placeholder="Name" id="kontakt-Name">
+          <input type="email" placeholder="E-mail" id="kontakt-Email">
+          <input type="text" placeholder="Adresse" id="kontakt-Adresse">
+          <input type="text" placeholder="Land" id="kontakt-Land">
+
+        <div id="auswahl-groesse">
+          <label for="Pferdegroesse">Pferdegroesse:</label>
+          <select name="auswahlGroesse" onchange=waehleGroesse() id="groesse">
+            <option disabled selected value> -- AUSWAHL -- </option>
+            <option value="Pony">Pony</option>
+            <option value="Cob/Vollblut">Cob-Vollblut</option>
+            <option value="Warmblut">Warmblut</option>
+            <option value="Kaltblut">Kaltblut</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary btn-purchase" type="button">Senden</button>
+      </div>
+
+
+      <div id="kauf-btn">
+        <span class="artikel-preis">€70</span>
+        <button class="btn btn1 shop-item-button" type="button">In den Warenkorb</button>
+      </div>
+    </div>
+
+
+    <section class="kundenstimmen">
+      <div class="wrapper">
+
+        <h2>Das sagen unsere Kunden</h2>
+        <p>Hier gehts zum <a href="pferdeKarusell.html"> Pferde Karussell</a></p>
+
+        <blockquote class="kundenstimme">
+
+          <h3>Wundervolles Pferdehalfter</h3>
+          <p>Vielen herzlichen Dank für dieses gelungene Halfter</p>
+          <footer>&mdash; Bernd</footer>
+        </blockquote>
+
+        <blockquote class="kundenstimme">
+          <h3>Besser geht's nicht</h3>
+          <p>Wir sind absolut begeistert!</p>
+          <footer class="kunde">&mdash; Anna</footer>
+        </blockquote>
+
+        <blockquote class="kundenstimme">
+          <h3>Genial</h3>
+          <p>Ein richtiges Kunstwerk</p>
+          <footer class="kunde">&mdash; Susanne</footer>
+        </blockquote>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+
+      <nav class="meta-nav">
+
+        <ul class="meta-nav-list">
+          <li><a href="http://www.dognate-impressum.net/#Impressum/Datenschutz">Impressum</a></li>
+          <li><a href="http://www.dognate-impressum.net/#Impressum/Datenschutz">Datenschutz</a></li>
+          <li><a href="#top">Nach oben</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

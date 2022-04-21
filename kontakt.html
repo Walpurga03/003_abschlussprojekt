@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>Kontakt - Pferdehalfter Konfigurator</title>
+  <meta name="description"
+    content="Hier haben sie die möglichkeit Ihr eigenes Pferdehalfter mit verschiedenen Materialeien zu gestalten.">
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Font Awesome https://fontawesome.com/start -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+</head>
+
+<body class="kontakt">
+
+  <header class="site-header">
+    <div class="wrapper">
+
+      <h1 class="site-logo">
+        <img src="assets/logo/logo-horsenate-240-33.gif" srcset="assets/logo/logo-horsenate-480-67.gif 2x,
+                        assets/logo/logo-horsenate-720-99.gif 3x" alt="Logo von Horsenate" width="100%" height="100%">
+      </h1>
+    </div>
+
+
+  </header>
+
+
+  <nav class="site-nav">
+    <div class="wrapper">
+
+      <button class="menubutton" onclick="this.classList.toggle('show-menu')">
+        <i class="fas fa-bars"></i>&nbsp;Menü
+      </button>
+
+      <ul class="site-nav-list">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html" class="sie-sind-hier">Kontakt</a></li>
+        <li><a href="pferdeKarusell.html">Pferde Karussell</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <main class="site-content">
+    <div class="wrapper">
+
+      <section class="content-intro">
+
+        <h2>Kontakt</h2>
+
+        <p>Fragen? Anregungen? Auf dieser Seite finden Sie Möglichkeiten, mit uns in Kontakt zu treten.</p>
+      </section>
+
+      <section class="kontaktdaten">
+
+        <h3 class="visually-hidden">Kontaktdaten</h3>
+
+        <address>
+          Renate Moik <br>
+          Sebleweg 3 <br>
+          6840 Götzis <br>
+          Österreich <br>
+          <br>
+          Tel: <a href="tel:+436641263069">0043 664 126 30 69</a>
+        </address>
+
+        <ul class="social-links">
+          <li><a href="https://twitter.com/dognatemode"><i class="fab fa-twitter fa-2x"></i></a></li>
+          <li><a href="https://www.instagram.com/dognate001/?hl=de"><i class="fab fa-instagram fa-2x"></i></a></li>
+          <li><a href="https://www.facebook.com/Hundemodeseite/"><i class="fab fa-facebook fa-2x"></i></a></li>
+        </ul>
+
+      </section>
+
+      <section class="kontaktformular-abschnitt">
+        
+        <h3 class="visually-hidden">Kontaktformular</h3>
+
+        <p>Mit dem folgenden Formular können Sie uns eine Nachricht senden.</p>
+
+          <form  class="kontaktformular" action="https://formspree.io/f/mnqlzypl" method="POST" id="my-form">
+
+            <div class="form-group">
+              <label for="firstName"> Vorname</label>
+              <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="form-group">
+              <label for="lastName"> Nachname</label>
+              <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="form-group">
+              <label for="email"> Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+              <label for="massage">Nachricht</label>
+              <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+              <button type="submit">Senden</button>
+            </div>
+          </form>
+        </div>
+        <div id="status"></div>
+      </section>
+      <script src="kontakt.js"></script>
+    </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <nav class="meta-nav">
+        <ul class="meta-nav-list">
+          <li><a href="http://www.dognate-impressum.net/#Impressum/Datenschutz">Impressum</a></li>
+          <li><a href="http://www.dognate-impressum.net/#Impressum/Datenschutz">Datenschutz</a></li>
+          <li><a href="#top">Nach oben</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/kontakt.js"></script>
+</body>
+
+</html>

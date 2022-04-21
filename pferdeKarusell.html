@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>News - Pferdehalfter Konfigurator</title>
+  <meta name="description"
+    content="Hier haben sie die möglichkeit Ihr eigenes Pferdehalfter mit verschiedenen Materialeien zu gestalten.">
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Font Awesome https://fontawesome.com/start -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    /* for touch screen laptop */
+    touch-action: none;
+  }
+
+  body {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: linear-gradient(to bottom, #e7d5b2, #f1c572);
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #drag-container,
+  #spin-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
+  }
+
+  #drag-container img {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    font-size: 50px;
+    text-align: center;
+    -webkit-box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 8px #fff;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    color: black;
+  }
+
+  #drag-container img:hover {
+    -webkit-box-shadow: 0 0 15px #fffd;
+    box-shadow: 0 0 15px #fffd;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+  }
+
+  #drag-container p {
+    font-family: Serif;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+    transform: translate(-50%, -50%) rotateX(90deg);
+    color: black;
+  }
+
+  #ground {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background: -webkit-radial-gradient(center center, farthest-side, #9993, transparent);
+  }
+
+  #music-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+
+    to {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+
+    to {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
+  }
+
+  @-webkit-keyframes spinRevert {
+    from {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
+
+    to {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+  }
+
+  @keyframes spinRevert {
+    from {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
+
+    to {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+  }
+
+  .karusell {
+    margin: auto;
+  }
+
+  img {
+    border-radius: 5%;
+  }
+</style>
+
+<body class="news">
+
+  <header class="site-header">
+    <div class="wrapper">
+
+      <h1 class="site-logo">
+        <img src="assets/logo/logo-horsenate-240-33.gif" srcset="assets/logo/logo-horsenate-480-67.gif 2x,
+                        assets/logo/logo-horsenate-720-99.gif 3x" alt="Logo von Horsenate" width="100%" height="100%">
+      </h1>
+
+    </div>
+  </header>
+
+
+  <nav class="site-nav">
+    <div class="wrapper">
+
+      <button class="menubutton" onclick="this.classList.toggle('show-menu')">
+        <i class="fas fa-bars"></i>&nbsp;Menü
+      </button>
+
+      <ul class="site-nav-list">
+        <li><a href="index.html">Startseite</a></li>
+        
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="pferdeKarusell.html" class="sie-sind-hier">Pferde Karussell</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <main class="karusell">
+
+    <div id="drag-container">
+      <div id="spin-container">
+
+        <img src="assets/images/sonstiges/1.JPG" alt="">
+        <img src="assets/images/sonstiges/2.JPG" alt="">
+        <img src="assets/images/sonstiges/3.JPG" alt="">
+        <img src="assets/images/sonstiges/4.jpg" alt="">
+        <img src="assets/images/sonstiges/5.JPG" alt="">
+        <img src="assets/images/sonstiges/6.JPG" alt="">
+        <img src="assets/images/sonstiges/7.JPG" alt="">
+        <img src="assets/images/sonstiges/8.JPG" alt="">
+        <img src="assets/images/sonstiges/9.jpg" alt="">
+        <img src="assets/images/sonstiges/10.JPG" alt="">
+        <img src="assets/images/sonstiges/11.JPG" alt="">
+        <img src="assets/images/sonstiges/12.JPG" alt="">
+
+        <p>Herzlichen Dank an Vanessa für die tollen Fotos und den Pferdebesitzern der hübschen Models!</p>
+      </div>
+      <div id="ground"></div>
+    </div>
+
+    <div id="music-container"></div>
+    
+
+    <script language="javascript" type="text/javascript" src="js/script.js"></script>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="wrapper">
+
+      <nav class="meta-nav">
+        <ul class="meta-nav-list">
+          <li><a href="http://www.dognate-impressum.net/#Impressum/Datenschutz">Impressum</a></li>
+          <li><a href="http://www.dognate-impressum.net/#Impressum/Datenschutz">Datenschutz</a></li>
+          <li><a href="#top">Nach oben</a></li>
+        </ul>
+
+      </nav>
+    </div>
+  </footer>
+
+</body>
+
+</html>
